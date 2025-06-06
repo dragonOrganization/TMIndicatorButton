@@ -1,6 +1,8 @@
 use_frameworks!
 
-platform :ios, '10.0'
+platform :ios, '13.0'
+
+install! 'cocoapods', :warn_for_unused_master_specs_repo => false
 
 target 'TMIndicatorButton_Example' do
   pod 'TMIndicatorButton', :path => '../'
@@ -8,9 +10,24 @@ target 'TMIndicatorButton_Example' do
   target 'TMIndicatorButton_Tests' do
     inherit! :search_paths
 
-    pod 'Quick', '~> 2.2.0'
-    pod 'Nimble', '~> 10.0.0'
-    pod 'FBSnapshotTestCase' , '~> 2.1.4'
-    pod 'Nimble-Snapshots' , '~> 9.4.0'
+    pod 'Quick', '~> 7.0'
+    pod 'Nimble', '~> 13.0'
+    pod 'iOSSnapshotTestCase', '~> 8.0'
+    pod 'Nimble-Snapshots', '~> 9.7'
+  end
+end
+
+post_install do |installer_representation|
+  installer_representation.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      deployment_target = config.build_settings['IPHONEOS_DEPLOYMENT_TARGET']
+      deployment_swift_target = config.build_settings['SWIFT_VERSION']
+      if !deployment_target.nil? && !deployment_target.empty? && deployment_target.to_f <= 13.0
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
+      end
+      if !deployment_swift_target.nil? && !deployment_swift_target.empty? && deployment_swift_target.to_f < 5.0
+        config.build_settings['SWIFT_VERSION'] = '5.0'
+      end
+    end
   end
 end

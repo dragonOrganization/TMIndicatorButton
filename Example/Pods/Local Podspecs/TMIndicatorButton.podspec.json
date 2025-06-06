@@ -1,0 +1,30 @@
+{
+  "name": "TMIndicatorButton",
+  "version": "0.1.0",
+  "summary": "A short description of TMIndicatorButton.",
+  "description": "A customizable loading button with various animation styles",
+  "homepage": "https://github.com/DragonBattlesun/TMIndicatorButton",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "DragonBattlesun": "dragonbattlesun@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/DragonBattlesun/TMIndicatorButton.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "13.0"
+  },
+  "source_files": "TMIndicatorButton/**/*",
+  "frameworks": "UIKit",
+  "dependencies": {
+    "MaterialComponents/Buttons": [
+
+    ]
+  },
+  "swift_versions": "5.0",
+  "swift_version": "5.0"
+}

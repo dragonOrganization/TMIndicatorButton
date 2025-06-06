@@ -1,0 +1,6 @@
+framework module TMIndicatorButton {
+  umbrella header "TMIndicatorButton-umbrella.h"
+
+  export *
+  module * { export * }
+}
