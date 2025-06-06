@@ -19,11 +19,11 @@ TMIndicatorButton 是一个功能丰富的 iOS 按钮组件，支持多种加载
 - 使用简单，配置灵活
                        DESC
 
-  s.homepage         = 'https://github.com/DragonBattlesun/TMIndicatorButton'
+  s.homepage         = 'https://github.com/dragonOrganization/TMIndicatorButton'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'DragonBattlesun' => 'dragonbattlesun@gmail.com' }
-  s.source           = { :git => 'https://github.com/DragonBattlesun/TMIndicatorButton.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/dragonOrganization/TMIndicatorButton.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '13.0'
