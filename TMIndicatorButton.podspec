@@ -27,7 +27,6 @@ TMIndicatorButton 是一个功能丰富的 iOS 按钮组件，支持多种加载
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '13.0'
-
   s.source_files = 'TMIndicatorButton/**/*'
 
   # s.resource_bundles = {
@@ -36,8 +35,16 @@ TMIndicatorButton 是一个功能丰富的 iOS 按钮组件，支持多种加载
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
-  s.dependency 'MaterialComponents/ActivityIndicator'
+  s.dependency 'MaterialComponents/Buttons'
   s.swift_version = '5.0'
-
+  s.pod_target_xcconfig = { 
+    'DEFINES_MODULE' => 'YES',
+    'SWIFT_OPTIMIZATION_LEVEL' => '-Onone',
+    'ENABLE_BITCODE' => 'NO',
+    'CLANG_ENABLE_MODULES' => 'YES',
+    'SWIFT_VERSION' => '5.0',
+    'IPHONEOS_DEPLOYMENT_TARGET' => '13.0',
+    'OTHER_LDFLAGS' => '-ObjC'
+  }
+  s.static_framework = true
 end

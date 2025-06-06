@@ -13,8 +13,6 @@ open class BallTrianglePathIndicator: TMIndicator {
     
     open override func setupAnimation(in layer: CALayer, size: CGSize) {
         let circleSize = size.width / 5
-        let deltaX = size.width / 2 - circleSize / 2
-        let deltaY = size.height / 2 - circleSize / 2
         let x = (layer.bounds.size.width - size.width) / 2
         let y = (layer.bounds.size.height - size.height) / 2
         let duration: CFTimeInterval = 2
