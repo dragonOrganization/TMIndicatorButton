@@ -81,7 +81,7 @@ open class TMIndicatorButton: MDCButton {
         self.bgColor = bgColor
         self.backgroundColor = bgColor
         self.setBackgroundImage(UIImage(.lightGray), for: .disabled)
-        self.contentEdgeInsets = UIEdgeInsets(top: 4, left: 4, bottom: 4, right: 4)
+        self.contentEdgeInsets = .zero
         self.setCornerBorder(cornerRadius: cornerRadius)
         self.cornerRadius = cornerRadius
     }
