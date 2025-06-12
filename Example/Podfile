@@ -6,6 +6,7 @@ install! 'cocoapods', :warn_for_unused_master_specs_repo => false
 
 target 'TMIndicatorButton_Example' do
   pod 'TMIndicatorButton', :path => '../'
+  pod 'SnapKit'
 
 end
 

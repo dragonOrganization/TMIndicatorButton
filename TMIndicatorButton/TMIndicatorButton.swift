@@ -76,7 +76,7 @@ open class TMIndicatorButton: MDCButton {
             self.setTitleColor(textColor, for: .normal)
             self.titleLabel?.adjustsFontSizeToFitWidth = true
         }
-        // Set button contents
+        self.isUppercaseTitle = false
         self.titleLabel?.font = font
         self.bgColor = bgColor
         self.backgroundColor = bgColor
