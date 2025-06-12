@@ -46,6 +46,7 @@ open class TMIndicatorButton: MDCButton {
     // Init
     public override init(frame: CGRect) {
         super.init(frame: frame)
+        self.isUppercaseTitle = false
     }
     /**
      Convenience init of theme button with required information
@@ -85,6 +86,7 @@ open class TMIndicatorButton: MDCButton {
         self.setCornerBorder(cornerRadius: cornerRadius)
         self.cornerRadius = cornerRadius
     }
+    
     /**
      Convenience init of material design button using system default colors. This initializer
      reflects dark mode colors on iOS 13 or later platforms. However, it will ignore any custom
