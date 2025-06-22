@@ -47,6 +47,7 @@ open class TMIndicatorButton: MDCButton {
     public override init(frame: CGRect) {
         super.init(frame: frame)
         self.isUppercaseTitle = false
+        self.contentEdgeInsets = .zero
     }
     /**
      Convenience init of theme button with required information
